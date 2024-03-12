@@ -1,7 +1,10 @@
-const mongoose = require("mongoose")
-const Document = require("./Document")
+const mongoose = require("mongoose");
+const dotenv= require("dotenv");
+const Document = require("./Document");
 
-mongoose.connect("mongodb://localhost/gdocss", {
+dotenv.config();
+
+mongoose.connect(process.env.CONNECTION_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
