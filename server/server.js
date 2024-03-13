@@ -4,7 +4,7 @@ const Document = require("./Document");
 
 dotenv.config();
 
-mongoose.connect(process.env.CONNECTION_URL, {
+mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
